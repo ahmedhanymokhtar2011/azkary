@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Noto Kufi Arabic",sans-serif;
+    transition: background 0.4s ease, color 0.4s ease;
 }
 
 html {
@@ -21,7 +22,6 @@ html {
 body{
     background: var(--bg);
 }
-
 
 header{
     display: flex;
@@ -71,6 +71,13 @@ nav ul i{
   color: var(--text);
   font-size: 30px;
   padding-right: 20px;
+  transition: 0.3s;
+}
+
+
+nav ul i:hover{
+  color: var(--primary);
+  transform: scale(1.1);
 }
 
 
@@ -173,6 +180,37 @@ line-height: 3;
 }
 
 
+body.dark {
+  background: #1a1f1c; /* خلفية غامقة */
+  color: #f4f1ea;
+}
+
+/* الكروت في الوضع الليلي */
+body.dark .card {
+  background: #202824;
+  color: #f4f1ea;
+  background: linear-gradient(195deg,#1a1f1c,#f4f1ea);
+}
+
+/* النصوص داخل الكروت */
+body.dark .card .card-text {
+  color: #f4f1ea;
+}
+
+body.dark .card .count,
+body.dark .card .source {
+  color: #f4f1ea;
+}
+
+/* الفوتر والهيدر يفضلوا زي ما هم */
+header,
+footer {
+  background: var(--bg); /* يفضلوا على نفس الألوان القديمة */
+  color: var(--text);
+}
+
+
+
 /* responsive */
 @media (max-width: 768px) {
   header{
@@ -190,8 +228,8 @@ line-height: 3;
     padding: 15px 0;
     display: none;
   }
-  nav ul i{
-    font-size: 25px;
+  nav ul a i{
+    font-size: 30px !important;
   }
 .title,
 .foot-title{

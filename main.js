@@ -59,16 +59,8 @@ fetch("adhkar.json")
 
 let body = document.body;
 let isDark = false;// start with light mode
-// change the background color
 
 function toggleColors() {
-  //if it's already dark ,switch back to light
-  if (isDark) {
-    body.style.background = "#f4f1ea";
-  } else {
-    //if it's light ,switch to dark
-        body.style.background = "#1a1f1c";
-  }
-  //flip the state (true <->false)
-  isDark = !isDark;
+  body.classList.toggle("dark");
 }
+
