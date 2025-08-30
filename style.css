@@ -190,6 +190,9 @@ line-height: 3;
     padding: 15px 0;
     display: none;
   }
+  nav ul i{
+    font-size: 25px;
+  }
 .title,
 .foot-title{
 text-align: right;
