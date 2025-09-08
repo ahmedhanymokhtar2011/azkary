@@ -24,7 +24,7 @@ body{
     display: flex;
     justify-content: center;
     min-height: 100vh;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 header{
@@ -278,13 +278,29 @@ header
 }
 
 body.dark .pray-container{
-  background-color: #fff;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
 }
 
 body.dark .pray-container .prayer-box .prayer{
   border: 1px solid var(--primary);
+  background-color: #fff;
 
 }
+
+body.dark .city-name{
+  color: var(--accent);
+}
+
+
+body.dark .search-box input::placeholder,.search-box input{
+  color: var(--accent);
+}
+
+body.dark  .search-box i,.search-box button{
+  color: var(--primary);
+}
+
 /*end dark mode*/
 /*responsive*/
 @media (max-width: 768px) {
@@ -317,6 +333,6 @@ body.dark .pray-container .prayer-box .prayer{
     display: none;
   }
   .pray-container{
-    top: 250px;
+    top: 200px;
   }
 }
