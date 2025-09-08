@@ -51,7 +51,7 @@ const data = await res.json();
     notFound.style.display = "none";
 
     //animate container expend
-    container.style.height = "600px";
+    container.style.height = "auto";
 
     //animate prayers
     document.querySelectorAll(".prayer").forEach((box, i) => {
@@ -62,7 +62,7 @@ const data = await res.json();
   } catch (err) {
     results.classList.remove("active");
     notFound.style.display = "block";
-    container.style.height = "300px";
+    container.style.height = "auto";
  }
 
 }
