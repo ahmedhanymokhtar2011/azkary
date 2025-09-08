@@ -59,8 +59,22 @@ fetch("adhkar.json")
 
 let body = document.body;
 let isDark = false;// start with light mode
-
+//toggle color function
 function toggleColors() {
   body.classList.toggle("dark");
+  //save in local storage
+  if (document.body.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
 }
+
+//when reloud page accept local storage
+window.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark")
+  }
+});
 
