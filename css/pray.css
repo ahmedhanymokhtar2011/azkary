@@ -272,10 +272,16 @@ body.dark .city-name{
   color: var(--accent);
 }
 
-body.dark .search-box input::placeholder,
-.search-box input{
+body.dark .search-box input{
   color: var(--accent);
 }
+
+body.dark .search-box input::placeholder
+{
+  color: var(--text);
+}
+
+
 
 body.dark  .search-box i,
 .search-box button{
