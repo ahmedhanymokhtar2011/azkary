@@ -29,7 +29,7 @@ function to12Hour(time24) {
 
   let hours = parseInt(match[1], 10);
   const minutes = match[2];
-  const period = hours >= 12 ? "PM" : "AM";
+  const period = hours >= 12 ? "م" : "ص";
 
   // 0 -> 12 AM, 13..23 -> 1..11 PM, 12 stays 12 PM
   hours = hours % 12 || 12;
